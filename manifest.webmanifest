@@ -1,0 +1,17 @@
+{
+  "name": "Parlem! · Aprende catalán",
+  "short_name": "Parlem!",
+  "lang": "es-ES",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f0ff",
+  "theme_color": "#6545d8",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
