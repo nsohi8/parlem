@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 395" preserveAspectRatio="xMidYMin slice">
+  <defs>
+    <linearGradient id="hills" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#a4b6ee" stop-opacity=".32"/><stop offset="1" stop-color="#ced4f4" stop-opacity="0"/></linearGradient>
+    <linearGradient id="fade" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#b8bef8" stop-opacity=".4"/><stop offset="1" stop-color="#b8bef8" stop-opacity="0"/></linearGradient>
+  </defs>
+  <path d="M0 0H425C325 36 255 109 0 183Z" fill="#a52a5a" opacity=".98"/>
+  <path d="M0 0H382C281 43 207 121 0 157Z" fill="#1d3e88"/>
+  <path d="M0 0H213C145 19 99 59 0 76Z" fill="#9e2558"/>
+  <g fill="#8e9fe0" opacity=".47" transform="translate(710 18)">
+    <path d="M0 158v-37h10v-48l5-17 5 17v48h11v-41h8V40l5-26 5 26v40h8v41h8V54l6-24 6 24v67h9V70l5-18 5 18v88z"/>
+    <path d="M14 38 16 19 19 38m21-30 3-19 4 19m22 13 3-18 4 18" stroke="#8e9fe0" stroke-width="3" fill="none"/>
+    <path d="M86 163h27v-30h16v-45h8v75h42v-52h14v52h23v-33h11v33h39v-43h24v43h19v-28h13v28h30v-49h8v-18l6-9 7 9v18h11v49h48v-34h19v34h24v-58h17v58h21v-24h33v24h20v-38h15v38h37v-52h24v52h29v-27h34v27z" opacity=".72"/>
+  </g>
+  <path d="M480 192Q610 156 745 184Q860 144 997 177Q1110 126 1252 177Q1380 143 1600 182V395H480Z" fill="url(#hills)"/>
+  <path d="M0 275Q195 226 376 251Q500 199 676 253Q857 211 1010 258Q1232 203 1600 253V395H0Z" fill="url(#fade)" opacity=".52"/>
+</svg>
