@@ -1,58 +1,70 @@
-<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#6545d8"><link rel="manifest" href="manifest.webmanifest"><title>Parlem! · Aprende catalán</title><style>
-:root{font-family:system-ui,-apple-system,sans-serif;color:#21153f}*{box-sizing:border-box}
-body{margin:0;min-height:100vh;background:radial-gradient(circle at 80% 0%,#e1e7ff 0,transparent 38%),linear-gradient(150deg,#f5efff,#f1f4ff 65%,#f9e9f2);font:17px system-ui}
-body:before{content:"";display:block;height:15px;background:linear-gradient(100deg,#9d1c56 0 30%,#173e91 30% 65%,#9d1c56 65% 100%)}
-.wrap{max-width:980px;margin:auto;padding:20px 22px 44px}
-.hero{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;min-height:330px;padding:28px 32px 0;border-radius:0 0 28px 28px;background:linear-gradient(125deg,#ffffffd9,#e5e9ff88);position:relative;overflow:hidden}
-.hero h1{font-size:clamp(52px,7vw,84px);letter-spacing:-4px;font-weight:900;color:#3a1a73;margin:0;line-height:1}
-.hero h1:after{content:"";display:block;width:62%;height:8px;margin:10px 0 8px 16%;border-radius:90%;transform:rotate(-4deg);background:linear-gradient(90deg,#ffcd2f 45%,#d82e55 45%)}
-.hero p{color:#4b4270;margin:16px 0 28px;font-weight:600}
-.mascot{width:clamp(180px,25vw,265px);height:clamp(265px,33vw,345px);object-fit:contain;object-position:center;border:0;border-radius:0;box-shadow:none;background:transparent;flex-shrink:0}
-.card{background:#ffffffeb;padding:clamp(18px,4vw,30px);border-radius:24px;margin:20px 0;box-shadow:0 9px 26px #30205716;border:1px solid #ffffff}
-h2{color:#2a174f;font-size:clamp(23px,4vw,30px);margin:10px 0 18px}h3{color:#312051;margin-top:24px}
-button,input,select{font:inherit;padding:13px 16px;border-radius:13px;border:1px solid #dcd5ee;margin:5px}
-button{background:linear-gradient(125deg,#5423b2,#752bdb);color:#fff;border:0;font-weight:700;cursor:pointer;box-shadow:0 4px 0 #391c7c}
-button:hover{filter:brightness(1.1);transform:translateY(-1px)}
-button:focus-visible{outline:3px solid #ffca38;outline-offset:3px}
-input{max-width:90%;background:#fff}select{background:#fff}
-#lessons{display:flex;flex-wrap:wrap;gap:8px}#lessons button{flex:1 1 165px;min-height:66px}
-#profiles button{background:linear-gradient(120deg,#3d328c,#7131d0)}
-.option{display:block;width:100%;text-align:left;background:#fff;color:#2c1e4b;border:2px solid #e7e0f7;box-shadow:none}
-.option:hover{background:#f3efff}
-.hidden{display:none!important}.muted{color:#67617a}
-.bar{height:12px;background:#e7defb;border-radius:20px;overflow:hidden}.bar div{height:100%;background:linear-gradient(90deg,#1a9f8e,#5bd2a5);border-radius:20px}
-#stats{font-weight:800;color:#a02a62}
-@media(max-width:520px){.wrap{padding:12px}.hero{min-height:160px;padding:12px;gap:6px}.mascot{height:210px;width:140px}.hero h1{letter-spacing:-2px}.card{margin:12px 0}#lessons button{flex-basis:130px}}
-
-/* Layout matched to the approved Parlem! mockup */
-body{background:linear-gradient(180deg,#d9ddff 0,#eeeaff 55%,#e9e8ff 100%);font-size:16px}
-body:before{height:12px;background:linear-gradient(155deg,#a21c57 0 9%,#173f97 9% 25%,#a21c57 25% 30%,transparent 30%)}
-.wrap{max-width:1050px;padding:0 20px 40px}
-.hero{min-height:165px;padding:20px 32px 0 35px;background:transparent;border-radius:0;overflow:visible;position:relative;z-index:2;justify-content:flex-start}
-.hero:before{content:"";position:absolute;z-index:-1;inset:0 -20px -50px;background:linear-gradient(180deg,#dedfff,#d8dcff88);clip-path:polygon(0 70%,12% 55%,25% 65%,39% 40%,55% 72%,70% 48%,83% 70%,100% 58%,100% 100%,0 100%);opacity:.8;pointer-events:none}
-.hero h1{font-size:clamp(45px,6vw,70px);letter-spacing:-3px;font-style:italic;transform:rotate(-3deg)}
-.hero h1:after{height:6px;margin-top:4px}
-.hero p{font-size:14px;font-weight:500;margin:12px 0 6px}
-.mascot{position:absolute;z-index:4;right:12%;top:0;width:215px;height:300px;object-fit:contain;object-position:center;border:0;background:transparent;box-shadow:none;border-radius:0}
-.card{position:relative;background:linear-gradient(150deg,#fff 0%,#fff 70%,#faf9ff 100%);border:1px solid #fff;border-radius:23px;padding:24px 28px;margin:12px auto;box-shadow:0 7px 17px #5345a321}
-#home>.card:first-child{min-height:190px;padding-right:240px}
-#dashboard{margin-top:14px}
-h2{font-size:clamp(22px,3vw,27px);margin:6px 0 13px}h3{font-size:19px;margin:18px 0 12px}
-button,input,select{font-size:15px;padding:10px 14px;border-radius:12px;margin:4px}
-button{box-shadow:none;background:#5c16d0}
-#lessons{gap:5px}#lessons button{flex:0 1 auto;min-height:42px;padding:9px 13px}
-#profiles button{background:#5c16d0}
-#stats{font-weight:500;color:#21153f}
-@media(max-width:650px){.wrap{padding:0 12px 24px}.hero{min-height:145px;padding:16px 8px}.hero h1{font-size:48px}.hero p{font-size:12px;max-width:230px}.mascot{right:0;top:10px;width:132px;height:185px}.card{padding:18px;margin:10px 0}#home>.card:first-child{padding-right:18px;padding-top:45px}#home>.card:first-child h2{max-width:65%}#lessons button{flex:1 1 125px}}
-
-body{background:radial-gradient(ellipse at 60% 15%,#f3eaff 0,#e3e3ff 52%,#e4e2fb 100%)}
-.wrap{max-width:1080px}
-.hero{min-height:170px}
-.hero:after{content:"";position:absolute;inset:10px 0 auto auto;width:45%;height:125px;z-index:-1;opacity:.35;background:linear-gradient(135deg,transparent 65%,#858bde 65% 68%,transparent 68%),linear-gradient(90deg,transparent 25%,#9aa1e8 25% 27%,transparent 27% 40%,#9aa1e8 40% 42%,transparent 42% 55%,#9aa1e8 55% 57%,transparent 57%)}
-.mascot{height:320px;width:230px;right:12%;top:-4px}
-#home>.card:first-child{min-height:205px}
-@media(max-width:650px){.hero{min-height:160px}.mascot{height:215px;width:150px;right:0;top:6px}#home>.card:first-child{padding-top:40px}}
-</style><div class="wrap"><header class="hero"><div><h1>Parlem!</h1><p>Aprende catalán desde el castellano ⚽</p></div><img class="mascot" decoding="async" src="./mascot-juggling.svg" alt="Niña con camiseta blaugrana haciendo toques con un balón"></header><div id="auth" class="card"><h2>Cuenta familiar</h2><input id="email" type="email" placeholder="Correo electrónico"><input id="pass" type="password" placeholder="Contraseña (mínimo 8 caracteres)"><p><button id="login">Entrar</button><button id="signup">Crear cuenta</button></p><p id="message" class="muted"></p></div><div id="home" class="hidden"><div class="card"><button id="logout">Cerrar sesión</button><h2>¿Quién aprende hoy?</h2><div id="profiles"></div><input id="name" placeholder="Nombre del alumno"><select id="mode"><option value="adult">Adulto</option><option value="child">Niño/a</option></select><button id="add">Añadir perfil</button></div><div id="dashboard" class="card hidden"><h2 id="welcome"></h2><p id="stats"></p><h3>Curso guiado · Unidad 1: Hola!</h3><div id="lessons"></div><h3>Bibliotecas de práctica</h3><button id="library">📚 Repasar vocabulario y frases</button></div><div id="game" class="card hidden"><button id="back">← Volver</button><h2 id="title"></h2><div class="bar"><div id="bar"></div></div><p id="count"></p><h2 id="prompt"></h2><button id="hear">🔊 Escuchar</button><button id="slow">🐢 Lento</button><div id="options"></div><p id="feedback"></p><button id="next" class="hidden">Continuar</button></div></div><p class="muted">Parlem! · Aprende catalán jugando. El audio depende de las voces disponibles en tu dispositivo.</p></div><script type="module">
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#42218c">
+<meta name="description" content="Parlem! Aprende catalán desde el castellano jugando.">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="stylesheet" href="./parlem-redesign.css?v=20261121-full-redesign">
+<title>Parlem! · Aprende catalán</title>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div class="hero-copy">
+    <h1>Parlem!</h1>
+    <p>Aprende catalán desde el castellano</p>
+  </div>
+  <img class="mascot" src="./mascot-juggling-hires.webp?v=20261121-full-redesign"
+       width="480" height="640" loading="eager" decoding="async"
+       alt="Niña con coleta oscura haciendo toques con un balón de fútbol con una equipación blaugrana">
+</header>
+<div id="auth" class="card">
+  <h2>Cuenta familiar</h2>
+  <input id="email" type="email" autocomplete="email" placeholder="Correo electrónico">
+  <input id="pass" type="password" autocomplete="current-password" placeholder="Contraseña (mínimo 8 caracteres)">
+  <p><button id="login">Entrar</button><button id="signup">Crear cuenta</button></p>
+  <p id="message" class="muted"></p>
+</div>
+<div id="home" class="hidden">
+  <div class="card profile-card">
+    <button id="logout">Cerrar sesión</button>
+    <h2>¿Quién aprende hoy?</h2>
+    <div id="profiles"></div>
+    <div class="profile-entry">
+      <input id="name" placeholder="Nombre del alumno" aria-label="Nombre del alumno">
+      <select id="mode" aria-label="Tipo de perfil">
+        <option value="child">Niño/a</option>
+        <option value="adult">Adulto</option>
+      </select>
+      <button id="add">Añadir perfil</button>
+    </div>
+  </div>
+  <div id="dashboard" class="card hidden">
+    <h2 id="welcome"></h2>
+    <p id="stats"></p>
+    <h3>Curso guiado · Unidad 1: Hola!</h3>
+    <div id="lessons"></div>
+    <h3>Bibliotecas de práctica</h3>
+    <button id="library">📚 Repasar vocabulario y frases</button>
+  </div>
+  <div id="game" class="card hidden">
+    <button id="back">← Volver</button>
+    <h2 id="title"></h2>
+    <div class="bar"><div id="bar"></div></div>
+    <p id="count"></p>
+    <h2 id="prompt"></h2>
+    <button id="hear">🔊 Escuchar</button>
+    <button id="slow">🐢 Lento</button>
+    <div id="options"></div>
+    <p id="feedback"></p>
+    <button id="next" class="hidden">Continuar</button>
+  </div>
+</div>
+<p class="muted footer-note">Parlem! · Aprende catalán jugando.</p>
+</div>
+<script type="module">
 import{createClient}from'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/+esm';
 const db=createClient('https://yzrrerwlkxbsipknjjjn.supabase.co','sb_publishable_7SURR9UWHYqdRo4OhLt4GQ_yYijr3VV');
 const el=x=>document.getElementById(x),vis=(x,v)=>el(x).classList.toggle('hidden',!v);
@@ -60,7 +72,7 @@ let user,profiles=[],active,progress=[],bank=[],index=0,correct=0,lesson='';
 const lessons=[['u1-l1','Hola! Com estàs?'],['u1-l2','Com et dius?'],['u1-l3','Jo soc…'],['u1-l4','D’on ets?'],['u1-l5','Parlem!'],['u1-l6','El repte final']];
 const cards=[['Hola!','Hola','Adiós','Gracias',1],['Bon dia','Buenos días','Buenas noches','Buenas tardes',1],['Bona tarda','Buenas tardes','Buenos días','Buenas noches',1],['Bona nit','Buenas noches','Buenos días','Gracias',1],['Adeu','Adiós','Hola','Gracias',1],['Gràcies','Gracias','Por favor','Adiós',1],['Com et dius?','¿Cómo te llamas?','¿Cómo estás?','¿De dónde eres?',2],['Em dic Laia','Me llamo Laia','Soy Laia','Estoy bien',2],['I tu?','¿Y tú?','¿Quién?','¿Dónde?',2],['Es diu Marc','Se llama Marc','Soy Marc','Eres Marc',2],['Jo soc de Barcelona','Soy de Barcelona','Estoy en Barcelona','Voy a Barcelona',3],['Tu ets la Marta','Tú eres Marta','Ella es Marta','Yo soy Marta',3],['Ella és de Catalunya','Ella es de Cataluña','Ella está en Cataluña','Ella va a Cataluña',3],['Nosaltres som amics','Somos amigos','Sois amigos','Son amigos',3],['D’on ets?','¿De dónde eres?','¿Cómo estás?','¿Cómo te llamas?',4],['Soc d’aquí','Soy de aquí','Estoy aquí','Vivo aquí',4],['Soc d’Espanya','Soy de España','Voy a España','Estoy en España',4],['Catalunya','Cataluña','España','Barcelona',4],['Com estàs?','¿Cómo estás?','¿Cómo te llamas?','¿Quién eres?',5],['Estic bé','Estoy bien','Soy bueno','Tengo hambre',5],['Fins demà','Hasta mañana','Hasta pronto','Buenas noches',5],['Si us plau','Por favor','Gracias','De nada',5],['Parles català?','¿Hablas catalán?','¿Eres catalán?','¿Vives en Cataluña?',5]];
 const speak=(text,slow=false)=>{if(!('speechSynthesis'in window)){alert('Este dispositivo no admite reproducción de voz.');return;}const voices=speechSynthesis.getVoices();const voice=voices.find(v=>/^ca(?:-|$)/i.test(v.lang))||voices.find(v=>/^es-ES$/i.test(v.lang))||voices.find(v=>/^es(?:-|$)/i.test(v.lang));if(!voice){alert('No hay una voz catalana ni española disponible en este dispositivo.');return;}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang=voice.lang;u.voice=voice;u.rate=slow?0.7:0.9;speechSynthesis.speak(u)};
-async function refresh(){const r=await db.auth.getUser();user=r.data.user;vis('auth',!user);vis('home',!!user);if(!user)return;const q=await db.from('learner_profiles').select('*').order('created_at');if(q.error){el('message').textContent=q.error.message;return}profiles=q.data;active=profiles.find(p=>p.id===active?.id)||profiles[0];el('profiles').replaceChildren(...profiles.map(p=>{const b=document.createElement('button');b.textContent=(p.mode==='child'?'⭐ ':'🦜 ')+p.display_name;b.onclick=()=>{active=p;dashboard()};return b}));await dashboard()}
+async function refresh(){const r=await db.auth.getUser();user=r.data.user;vis('auth',!user);vis('home',!!user);if(!user)return;const q=await db.from('learner_profiles').select('*').order('created_at');if(q.error){el('message').textContent=q.error.message;return}profiles=q.data;active=profiles.find(p=>p.id===active?.id)||profiles[0];el('profiles').replaceChildren(...profiles.map(p=>{const b=document.createElement('button');b.textContent=(p.mode==='child'?'⭐ ':'👤 ')+p.display_name;b.onclick=()=>{active=p;dashboard()};return b}));await dashboard()}
 async function dashboard(){vis('dashboard',!!active);vis('game',false);if(!active)return;const q=await db.from('lesson_progress').select('*').eq('learner_id',active.id);progress=q.data||[];el('welcome').textContent='¡Hola, '+active.display_name+'!';el('stats').textContent=progress.reduce((a,p)=>a+p.xp,0)+' XP · '+progress.filter(p=>p.completed).length+' lecciones completadas';el('lessons').replaceChildren(...lessons.map(([id,label])=>{const b=document.createElement('button');b.textContent=label+(progress.some(p=>p.lesson_id===id&&p.completed)?' ✓':'');b.onclick=()=>start(id);return b}))}
 function start(id){lesson=id;bank=cards.filter(q=>id==='u1-l6'||q[4]===Number(id.slice(-1))).sort(()=>Math.random()-.5);index=0;correct=0;vis('dashboard',false);vis('game',true);el('title').textContent=lessons.find(l=>l[0]===id)?.[1]||'Repaso';draw()}
 function draw(){const q=bank[index];el('bar').style.width=(index/bank.length*100)+'%';el('count').textContent=(index+1)+' / '+bank.length;el('prompt').textContent=q[0];el('feedback').textContent='';vis('next',false);el('options').replaceChildren(...q.slice(1,4).sort(()=>Math.random()-.5).map(a=>{const b=document.createElement('button');b.className='option';b.textContent=a;b.onclick=()=>{const yes=a===q[1];if(yes)correct++;el('feedback').textContent=yes?'¡Correcto!':'Respuesta: '+q[1];el('options').querySelectorAll('button').forEach(x=>x.disabled=true);vis('next',true)};return b}));speak(q[0])}
@@ -72,4 +84,6 @@ el('signup').onclick=async()=>{const r=await db.auth.signUp({email:el('email').v
 el('logout').onclick=async()=>{await db.auth.signOut();active=null;refresh()};
 el('add').onclick=async()=>{const name=el('name').value.trim();if(!name)return;const r=await db.from('learner_profiles').insert({owner_id:user.id,display_name:name,mode:el('mode').value});if(r.error)alert(r.error.message);else{el('name').value='';refresh()}};
 db.auth.onAuthStateChange(()=>setTimeout(refresh,0));refresh();if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
-</script></html>
+</script>
+</body>
+</html>
